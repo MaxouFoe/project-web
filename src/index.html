@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frances Tiafoe Tribute</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link href="./questionnaire.css" rel="stylesheet" />
+    <script src="./questionnaire.js"></script>
+    <script src="./calculatrice.js"></script>
+  </head>
+  <body class="font-sans">
+<!-- NAVBAR -->
+<nav class="navbar bg-base-100 shadow-md sticky top-0 z-20">
+  <div class="container mx-auto flex justify-between items-center px-6 py-3">
+    <a href="#" class="text-2xl font-bold text-primary">Frances Tiafoe</a>
+    <ul class="hidden md:flex space-x-6 text-gray-400 font-semibold">
+      <li><a href="#hero" class="hover:text-primary transition">Accueil</a></li>
+      <li><a href="#bio" class="hover:text-primary transition">Biographie</a></li>
+      <li><a href="#palmares" class="hover:text-primary transition">Palmarès</a></li>
+      <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+      <li><label for="my_modal_7" class="cursor-pointer text-sm/6 font-semibold bg-transparent border-none p-0">Calculatrice</label></li>
+    </ul>
+    <button id="burger-btn" class="md:hidden focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" 
+           stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  </div>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-base-100 px-6 py-4 space-y-4">
+    <a href="#hero" class="block text-gray-700 font-semibold hover:text-primary">Accueil</a>
+    <a href="#bio" class="block text-gray-700 font-semibold hover:text-primary">Biographie</a>
+    <a href="#palmares" class="block text-gray-700 font-semibold hover:text-primary">Palmarès</a>
+    <a href="#contact" class="block text-gray-700 font-semibold hover:text-primary">Contact</a>
+    <label for="my_modal_7" class="cursor-pointer text-sm/6 font-semibold text-gray-700 bg-transparent border-none p-0">Calculatrice</label>
+  </div>
+
+  <script>
+    const burgerBtn = document.getElementById('burger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    burgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const expanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+      burgerBtn.setAttribute('aria-expanded', !expanded);
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</nav>
+
+    <!-- HERO -->
+    <section class="hero min-h-screen bg-base-200 relative overflow-hidden" id="hero">
+      <!-- Background flou -->
+      <div
+        class="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+        style="background-image: url('https://photo-assets.usopen.org/images/pics/large/f_USTA1652193_20240903_USO_SB4_3987.jpg');"
+        aria-hidden="true"
+      ></div>
+      <!-- Overlay sombre pour contraste -->
+      <div class="absolute inset-0 bg-black opacity-40" aria-hidden="true"></div>
+
+      <div class="hero-content text-center relative z-10">
+        <div class="max-w-md text-white">
+          <h1 class="text-5xl font-bold">Frances Tiafoe</h1>
+          <p class="py-6">Big Foe. Puissance, passion, personnalité.</p>
+          <a class="btn btn-primary" href="#bio">En savoir plus</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO -->
+    <section class="p-10 bg-white text-gray-800 flex flex-col md:flex-row gap-10" id="bio">
+      <!-- Biographie à gauche -->
+      <div class="mt-4 text-center">
+        <h2 class="mt-8 text-3xl font-bold mb-8" >Biographie</h2>
+        <p>
+          Frances Tiafoe est né en 1998 à Hyattsville, dans le Maryland, aux États-Unis. Fils d'immigrants originaires de Sierra Leone, il a grandi dans un environnement modeste, où ses parents travaillaient comme gardiens de courts de tennis, ce qui lui a permis d’accéder au sport dès son plus jeune âge. Tiafoe s’est rapidement démarqué par son talent et son énergie explosive sur le court. Il est devenu le premier joueur afro-américain à remporter un titre ATP depuis Arthur Ashe, en s’imposant au tournoi de Delray Beach en 2018. Sa carrière est marquée par une progression constante, atteignant les quarts de finale de l’US Open en 2022, où il a notamment battu Rafael Nadal. En 2023, il a intégré le top 10 mondial, symbole de son ascension fulgurante dans le tennis professionnel. Reconnu pour son style agressif et son charisme, Frances Tiafoe incarne une nouvelle génération de joueurs qui bousculent les codes traditionnels du tennis.
+        </p>
+      </div>
+    
+      <!-- Questionnaire à droite -->
+      
+    </section>
+    
+
+    <!-- PALMARÈS -->
+<section class="p-10 bg-base-100" id="palmares">
+  <h2 class="mt-8 text-3xl font-bold mb-6 text-center" >Palmarès</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="card bg-base-200 shadow-xl">
+      <figure>
+        <img src="https://i.redd.it/9q1yu65sq5m91.jpg" alt="ATP Delray Beach 2018" class="rounded-t-lg object-cover h-48 w-full" />
+      </figure>
+      <div class="card-body">
+        <h3 class="card-title">ATP Delray Beach 2018</h3>
+        <p>Premier titre ATP remporté à 20 ans.</p>
+      </div>
+    </div>
+    <div class="card bg-base-200 shadow-xl">
+      <figure>
+        <img src="https://photo-assets.usopen.org/images/pics/large/f_USTA1652193_20240903_USO_SB4_3987.jpg" alt="US Open 2022" class="rounded-t-lg object-cover h-48 w-full" />
+      </figure>
+      <div class="card-body">
+        <h3 class="card-title">US Open 2022</h3>
+        <p>Demi-finaliste, battant Nadal en cours de route.</p>
+      </div>
+    </div>
+    <div class="card bg-base-200 shadow-xl">
+      <figure>
+        <img src="https://www.lequipe.fr/_medias/img-photo-jpg/la-joie-de-frances-tiafoe-apres-sa-victoire-lors-du-tournoi-de-stuttgart-e-weber-expa-eibner-pressef/1500000001800725/0:0,1998:1332-828-552-75/25d88.jpg" alt="Top 10 ATP 2023" class="rounded-t-lg object-cover h-48 w-full" />
+      </figure>
+      <div class="card-body">
+        <h3 class="card-title">Top 10 ATP 2023</h3>
+        <p>Entre officiellement dans l’élite mondiale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="classement-atp" class="mt-8 mb-8 p-6 bg-gray-50 rounded-lg max-w-xl mx-auto shadow">
+  <h2 class="text-2xl font-bold mb-4 text-gray-900 text-center">Classement ATP actuel (Top 15)</h2>
+  <table class="w-full text-left border-collapse">
+    <thead>
+      <tr class="bg-gray-200">
+        <th class="border-b border-gray-400 p-2 text-gray-900">Rang</th>
+        <th class="border-b border-gray-400 p-2 text-gray-900">Joueur</th>
+        <th class="border-b border-gray-400 p-2 text-gray-900">Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white text-gray-900"><td class="p-2 border-b border-gray-300">1</td><td class="p-2 border-b border-gray-300 font-semibold">Carlos Alcaraz</td><td class="p-2 border-b border-gray-300">7830</td></tr>
+      <tr class="bg-gray-50 text-gray-900"><td class="p-2 border-b border-gray-300">2</td><td class="p-2 border-b border-gray-300 font-semibold">Novak Djokovic</td><td class="p-2 border-b border-gray-300">7150</td></tr>
+      <tr class="bg-white text-gray-900"><td class="p-2 border-b border-gray-300">3</td><td class="p-2 border-b border-gray-300 font-semibold">Daniil Medvedev</td><td class="p-2 border-b border-gray-300">6350</td></tr>
+      <tr class="bg-gray-50 text-gray-900"><td class="p-2 border-b border-gray-300">4</td><td class="p-2 border-b border-gray-300 font-semibold">Stefanos Tsitsipas</td><td class="p-2 border-b border-gray-300">5230</td></tr>
+      <tr class="bg-white text-gray-900"><td class="p-2 border-b border-gray-300">5</td><td class="p-2 border-b border-gray-300 font-semibold">Andrey Rublev</td><td class="p-2 border-b border-gray-300">4780</td></tr>
+      <tr class="bg-gray-50 text-gray-900"><td class="p-2 border-b border-gray-300">6</td><td class="p-2 border-b border-gray-300 font-semibold">Jannik Sinner</td><td class="p-2 border-b border-gray-300">4560</td></tr>
+      <tr class="bg-white text-gray-900"><td class="p-2 border-b border-gray-300">7</td><td class="p-2 border-b border-gray-300 font-semibold">Casper Ruud</td><td class="p-2 border-b border-gray-300">4350</td></tr>
+      <tr class="bg-gray-50 text-gray-900"><td class="p-2 border-b border-gray-300">8</td><td class="p-2 border-b border-gray-300 font-semibold">Taylor Fritz</td><td class="p-2 border-b border-gray-300">4210</td></tr>
+      <tr class="bg-white text-gray-900"><td class="p-2 border-b border-gray-300">9</td><td class="p-2 border-b border-gray-300 font-semibold">Hubert Hurkacz</td><td class="p-2 border-b border-gray-300">3970</td></tr>
+      <tr class="bg-gray-50 text-red-500"><td class="p-2 border-b border-gray-300">10</td><td class="p-2 border-b border-gray-300 font-semibold">Frances Tiafoe</td><td class="p-2 border-b border-gray-300">3850</td></tr>
+      <tr class="bg-white text-gray-900"><td class="p-2 border-b border-gray-300">11</td><td class="p-2 border-b border-gray-300 font-semibold">Felix Auger-Aliassime</td><td class="p-2 border-b border-gray-300">3720</td></tr>
+      <tr class="bg-gray-50 text-gray-900"><td class="p-2 border-b border-gray-300">12</td><td class="p-2 border-b border-gray-300 font-semibold">Diego Schwartzman</td><td class="p-2 border-b border-gray-300">3550</td></tr>
+      <tr class="bg-white text-gray-900"><td class="p-2 border-b border-gray-300">13</td><td class="p-2 border-b border-gray-300 font-semibold">Denis Shapovalov</td><td class="p-2 border-b border-gray-300">3440</td></tr>
+      <tr class="bg-gray-50 text-gray-900"><td class="p-2 border-b border-gray-300">14</td><td class="p-2 border-b border-gray-300 font-semibold">Roberto Bautista Agut</td><td class="p-2 border-b border-gray-300">3300</td></tr>
+      <tr class="bg-white text-gray-900"><td class="p-2 border-b border-gray-300">15</td><td class="p-2 border-b border-gray-300 font-semibold">Gaël Monfils</td><td class="p-2 border-b border-gray-300">3150</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+    <!-- GALERIE -->
+    <div class="flex flex-col isolate h-screen w-screen items-center bg-white" id="contact">
+      <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-700 sm:text-6xl text-center mt-24">Me contacter</h1>
+      <h2 class="text-2xl text-gray-700 mt-2 mb-8 text-center">Pour pouvoir me contacter, vous devez prouver votre passion pour le football en répondant à ce questionnaire</h2>
+      <div id="divquest" class="flex flex-col bg-white p-6 rounded-lg shadow-lg max-w-md w-full mt-12">
+        <h1 class="text-2xl font-bold mb-4 text-center text-gray-700">Questionnaire</h1>
+        <div id="question" class="text-xl font-bold mb-4 text-center text-gray-700">Quel est la capitale de la France ?</div>
+        <div id="reponses" class="flex flex-col space-y-2"><button class="btn btn-primary">Marseille</button><button class="btn btn-primary">Pontault-Combault</button><button class="btn btn-primary">Paris</button><button class="btn btn-primary">L' Annexe</button></div>
+        <button id="bruteforce-btn" class="cursor-pointer transition active:scale-110 rounded-md mt-2 bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none " onclick="bruteforce(this)">Bruteforce 👨&zwj;💻</button>
+        <span id="spinner" class="loading loading-spinner text-neutral hidden loading-xl mb-4"></span>
+        <div id="result" class="text-lg text-red-700 text-center"></div>
+        <div id="countdown" class="text-lg text-green-600"></div>
+      
+      </div>
+      
+      
+      
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer footer-center p-4 bg-base-200 text-base-content">
+      <aside>
+        <p>© 2025 - Hommage à Frances Tiafoe - Maxens Melquiond </p>
+      </aside>
+    </footer>
+
+
+
+    <!-- Calculatrice -->
+    <input type="checkbox" id="my_modal_7" class="modal-toggle" />
+    <div class="modal backdrop-blur-sm" role="dialog">
+      <div class="modal-box flex p-0 w-auto h-auto">
+        <div class="bg-base-100 p-6 rounded-lg shadow-lg text-center space-y-4 w-64" id="calculatrice">
+          <h2 class="text-xl font-semibold text-black-700">Calculatrice</h2>
+      
+          <p id="resultat" class="text-2xl font-bold bg-gray-100 p-3 rounded-lg text-right text-black">0</p>
+      
+          <div class="grid grid-cols-4 gap-2">
+            <button class="btn btn-outline btn-number" data-value="7">7</button>
+            <button class="btn btn-outline btn-number" data-value="8">8</button>
+            <button class="btn btn-outline btn-number" data-value="9">9</button>
+            <button class="btn btn-secondary btn-operator" data-value="+">+</button>
+      
+            <button class="btn btn-outline btn-number" data-value="4">4</button>
+            <button class="btn btn-outline btn-number" data-value="5">5</button>
+            <button class="btn btn-outline btn-number" data-value="6">6</button>
+            <button class="btn btn-secondary btn-operator" data-value="-">-</button>
+      
+            <button class="btn btn-outline btn-number" data-value="1">1</button>
+            <button class="btn btn-outline btn-number" data-value="2">2</button>
+            <button class="btn btn-outline btn-number" data-value="3">3</button>
+            <button class="btn btn-secondary btn-operator" data-value="*">*</button>
+      
+            <button class="btn btn-outline btn-number" data-value="0">0</button>
+            <button class="btn btn-error col-span-3" id="btn-clear">C</button>
+      
+            <button class="btn btn-success col-span-4" id="btn-equal">=</button>
+          </div>
+        </div>
+      </div>
+      
+      <label class="modal-backdrop" for="my_modal_7">Close</label>
+    </div>
+
+    <script>
+
+
+    
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const index = parseInt(btn.dataset.index);
+          const itemWidth = carousel.clientWidth;
+          carousel.scrollTo({
+            left: index * itemWidth,
+            behavior: "smooth"
+          });
+        });
+      });
+
+      const openBtn = document.getElementById('openMenu');
+      const closeBtn = document.getElementById('closeMenu');
+      const backdrop = document.getElementById('backdrop');
+      const mobileMenu1 = document.getElementById('mobileMenu');
+
+      openBtn.addEventListener('click', () => {
+        mobileMenu1.classList.remove('translate-x-full');
+        mobileMenu1.classList.add('translate-x-0');
+
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        backdrop.classList.add('opacity-100');
+      });
+
+      closeBtn.addEventListener('click', () => {
+
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        backdrop.classList.remove('opacity-100');
+        mobileMenu1.classList.remove('translate-x-0');
+        mobileMenu1.classList.add('translate-x-full');
+      });
+
+
+      // Ferme le menu quand un lien du menu mobile est cliqué
+      document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu1.classList.remove('translate-x-0');
+          mobileMenu1.classList.add('translate-x-full');
+        });
+      });
+      // Ferme le menu si on clique sur le label de la calculatrice dans le menu mobile
+      const calcLabel = document.querySelector('#mobileMenu label[for="my_modal_7"]');
+
+      if (calcLabel) {
+        calcLabel.addEventListener('click', () => {
+          mobileMenu1.classList.remove('translate-x-0');
+          mobileMenu1.classList.add('translate-x-full');
+        });
+      }
+
+      // Ferme aussi quand on clique sur le backdrop
+      backdrop.addEventListener('click', () => {
+        closeBtn.click();
+      });
+
+    
+    </script>
+  </body>
+</html>
